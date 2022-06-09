@@ -1,4 +1,4 @@
-﻿/*using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using Newtonsoft.Json;
@@ -14,10 +14,11 @@ namespace lab4
 
         public Garden(params Tree[] arr)
         {
-            foreach (var item in arr)
+            /*foreach (var item in arr)
             {
                 gardenList.Add(item);
-            }
+            }*/
+            arr.ToList().ForEach(x => gardenList.Add(x));
         }
 
         public void showGarden()
@@ -346,7 +347,7 @@ namespace lab4
     {
         static void Main()
         {
-            *//*Apple appleTree1 = new Apple(30, 5);
+            /*Apple appleTree1 = new Apple(30, 5);
             Apple appleTree2 = new Apple(45, 7);
             Apple appleTree3 = new Apple(50, 9);
 
@@ -364,11 +365,11 @@ namespace lab4
 
             Orange orangeTree1 = new Orange(1, 5);
             Orange orangeTree2 = new Orange(2, 7);
-            Orange orangeTree3 = new Orange(3, 9);*//*
+            Orange orangeTree3 = new Orange(3, 9);*/
 
 
 
-            Garden garden = new Garden(new Apple(50, 5), new Cherry(23, 3), new Grape(16, 3), new Pear(5, 7), new Orange(1, 1), new Apple(20, 3), new Apple(36, 4), new Apple(5, 8));
+            Garden garden = new Garden(new Apple(30, 5), new Cherry(20, 3), new Grape(15, 3), new Pear(5, 7), new Orange(1, 5), new Apple(12, 3), new Apple(36, 4), new Apple(5, 8));
             //garden.showGarden();
             garden.transplantAllNeededTrees();
 
@@ -376,4 +377,4 @@ namespace lab4
 
         }
     }
-}*/
+}
